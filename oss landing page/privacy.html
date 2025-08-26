@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - OSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #1e40af;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        main {
+            padding: 120px 0 50px;
+            min-height: 100vh;
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .privacy-header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .privacy-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .privacy-content {
+            padding: 3rem 2rem;
+        }
+
+        .last-updated {
+            background: #f1f5f9;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            color: #1e40af;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .section h3 {
+            color: #374151;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .section ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            color: #4b5563;
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h4 {
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box p {
+            color: #92400e;
+            margin: 0;
+        }
+
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #dcfce7;
+            color: #166534;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .contact-info h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #3b82f6;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #3b82f6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 1rem;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .privacy-header {
+                padding: 2rem 1rem;
+            }
+
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+
+            .privacy-content {
+                padding: 2rem 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+
+            .security-badge {
+                display: block;
+                text-align: center;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">OSS</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="privacy-container">
+                <div class="privacy-header">
+                    <h1>Privacy Policy</h1>
+                    <p>Your privacy and security are our top priorities. Learn how we protect your personal information and documents.</p>
+                </div>
+
+                <div class="privacy-content">
+                    <div class="last-updated">
+                        <strong>Last Updated:</strong> August 26, 2025
+                    </div>
+
+                    <div class="section">
+                        <h2>1. Introduction</h2>
+                        <p>OSS is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, store, and protect your information when you use our government document application services.</p>
+                        
+                        <div class="highlight-box">
+                            <h4>🔒 Security First</h4>
+                            <p>We use bank-level encryption and follow government security standards to protect your sensitive documents and personal information.</p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>2. Information We Collect</h2>
+                        
+                        <h3>2.1 Personal Information</h3>
+                        <p>We collect the following types of personal information necessary for government document processing:</p>
+                        <ul>
+                            <li>Full name, date of birth, and contact information</li>
+                            <li>Government-issued identification numbers (SSN, passport numbers, etc.)</li>
+                            <li>Address and residential history</li>
+                            <li>Employment and educational information</li>
+                            <li>Emergency contact details</li>
+                        </ul>
+
+                        <h3>2.2 Documents and Files</h3>
+                        <p>Users upload various documents required for government applications, including:</p>
+                        <ul>
+                            <li>Identity verification documents (driver's license, passport, etc.)</li>
+                            <li>Proof of residence and citizenship documents</li>
+                            <li>Supporting certificates and legal documents</li>
+                            <li>Photographs for official identification purposes</li>
+                            <li>Financial documents when required for specific applications</li>
+                        </ul>
+
+                        <h3>2.3 Payment Information</h3>
+                        <p>For processing fees and service charges, we collect:</p>
+                        <ul>
+                            <li>Credit card or debit card information</li>
+                            <li>Billing address and contact information</li>
+                            <li>Bank account details for direct transfers (when applicable)</li>
+                            <li>Payment history and transaction records</li>
+                        </ul>
+
+                        <div class="security-badge">🔐 PCI DSS Compliant</div>
+                        <div class="security-badge">🛡️ SSL Encrypted</div>
+                        <div class="security-badge">🏦 Bank-Level Security</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>3. How We Use Your Information</h2>
+                        <p>Your information is used exclusively for the following purposes:</p>
+                        <ul>
+                            <li><strong>Document Processing:</strong> To complete and submit government document applications on your behalf</li>
+                            <li><strong>Identity Verification:</strong> To verify your identity and prevent fraud</li>
+                            <li><strong>Payment Processing:</strong> To process service fees and government filing fees</li>
+                            <li><strong>Customer Support:</strong> To provide assistance and updates on your applications</li>
+                            <li><strong>Legal Compliance:</strong> To comply with government regulations and legal requirements</li>
+                            <li><strong>Service Improvement:</strong> To enhance our platform and services (using anonymized data only)</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2>4. Payment Security</h2>
+                        
+                        <h3>4.1 Payment Processing</h3>
+                        <p>We partner with industry-leading payment processors who maintain the highest security standards:</p>
+                        <ul>
+                            <li>All payment data is encrypted using TLS 1.3 protocol</li>
+                            <li>We are PCI DSS Level 1 compliant</li>
+                            <li>Credit card information is tokenized and never stored on our servers</li>
+                            <li>Multi-factor authentication for payment processing</li>
+                        </ul>
+
+                        <h3>4.2 Financial Data Protection</h3>
+                        <p>Your financial information receives additional protection:</p>
+                        <ul>
+                            <li>Separate encrypted databases for payment information</li>
+                            <li>Regular security audits by third-party security firms</li>
+                            <li>Fraud detection and prevention systems</li>
+                            <li>Immediate notification of suspicious activities</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <h4>💳 Payment Security Guarantee</h4>
+                            <p>We guarantee that your payment information is processed through secure, encrypted channels and is never stored in plain text on our systems.</p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>5. Document Security</h2>
+                        <p>Your uploaded documents are protected through multiple security layers:</p>
+                        <ul>
+                            <li><strong>End-to-End Encryption:</strong> Documents are encrypted from upload to deletion</li>
+                            <li><strong>Secure Storage:</strong> Files are stored in SOC 2 Type II certified data centers</li>
+                            <li><strong>Access Controls:</strong> Role-based access with multi-factor authentication</li>
+                            <li><strong>Audit Trails:</strong> Complete logs of who accessed what documents and when</li>
+                            <li><strong>Automatic Deletion:</strong> Documents are permanently deleted after application completion</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2>6. Information Sharing</h2>
+                        <p>We share your information only in the following circumstances:</p>
+                        <ul>
+                            <li><strong>Government Agencies:</strong> Required information is shared with relevant government offices for document processing</li>
+                            <li><strong>Service Providers:</strong> Trusted third parties who assist in payment processing and document delivery</li>
+                            <li><strong>Legal Requirements:</strong> When required by law, court order, or government regulation</li>
+                            <li><strong>Your Consent:</strong> When you explicitly authorize information sharing</li>
+                        </ul>
+                        <p><strong>We never sell your personal information to third parties.</strong></p>
+                    </div>
+
+                    <div class="section">
+                        <h2>7. Data Retention</h2>
+                        <p>We retain your information for the following periods:</p>
+                        <ul>
+                            <li><strong>Application Data:</strong> Retained for 7 years as required by government regulations</li>
+                            <li><strong>Uploaded Documents:</strong> Automatically deleted 90 days after application completion</li>
+                            <li><strong>Payment Records:</strong> Kept for 7 years for tax and audit purposes</li>
+                            <li><strong>Account Information:</strong> Retained until you request account deletion</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2>8. Your Rights</h2>
+                        <p>You have the following rights regarding your personal information:</p>
+                        <ul>
+                            <li><strong>Access:</strong> Request copies of your personal information</li>
+                            <li><strong>Correction:</strong> Request correction of inaccurate information</li>
+                            <li><strong>Deletion:</strong> Request deletion of your personal information (subject to legal requirements)</li>
+                            <li><strong>Data Portability:</strong> Request your data in a portable format</li>
+                            <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2>9. Security Measures</h2>
+                        <p>We implement comprehensive security measures including:</p>
+                        <ul>
+                            <li>256-bit SSL encryption for all data transmission</li>
+                            <li>Multi-factor authentication for all user accounts</li>
+                            <li>Regular security assessments and penetration testing</li>
+                            <li>Employee background checks and security training</li>
+                            <li>24/7 security monitoring and incident response</li>
+                            <li>Regular data backups with encrypted storage</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2>10. Changes to This Policy</h2>
+                        <p>We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will notify you of significant changes via email or through our platform. Continued use of our services constitutes acceptance of the updated policy.</p>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>If you have questions about this Privacy Policy or how we handle your information, please contact us:</p>
+                        <p><strong>Email:</strong> oss.portal111@gmail.com</p>
+                        <p><strong>Phone:</strong> +91 8099444024</p>
+                        <p><strong>Address:</strong> OSS Office, SANJOG PATH, NEAR AMRIT UDYAN ,OPP - D C OFFICE, Assam - 783101</p>
+                        <p><strong>Response Time:</strong> We respond to privacy inquiries within 48 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Passport Application</a></li>
+                        <li><a href="#">Birth Certificate</a></li>
+                        <li><a href="#">Marriage Certificate</a></li>
+                        <li><a href="#">Tax Documents</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Track Application</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                        <li><a href="./privacy.html">Terms of Service</a></li>
+                        <li><a href="#">Open Source</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OSS. An open-source initiative to simplify government document applications. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.backgroundColor = '#1e40af';
+                navLinks.style.padding = '1rem';
+            }
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.backgroundColor = '#1e3a8a';
+            } else {
+                nav.style.backgroundColor = '#1e40af';
+            }
+        });
+    </script>
+</body>
+</html>
